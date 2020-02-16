@@ -14,8 +14,8 @@
         </commentGenerator>
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://172.21.72.161:3306/mas_dev?useUnicode=true"
-                        userId="mas_dev" password="mas_dev">
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/mas_dev?useUnicode=true"
+                        userId="root" password="root">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>

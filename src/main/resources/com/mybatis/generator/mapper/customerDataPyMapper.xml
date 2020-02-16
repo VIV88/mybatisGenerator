@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mybatis.generator.dao.customerDataPyMapper" >
+  <resultMap id="BaseResultMap" type="com.mybatis.generator.model.customerDataPy" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="PROVINCE" property="province" jdbcType="VARCHAR" />
+    <result column="CITY" property="city" jdbcType="VARCHAR" />
+    <result column="COUNTY" property="county" jdbcType="VARCHAR" />
+    <result column="SOCIAL_CREDIT_CODE" property="socialCreditCode" jdbcType="VARCHAR" />
+    <result column="COMPANY_REG_NUMBER" property="companyRegNumber" jdbcType="VARCHAR" />
+    <result column="COMPANY_NUMBER" property="companyNumber" jdbcType="BIGINT" />
+    <result column="COMPANY_ENGLISH_NAME" property="companyEnglishName" jdbcType="VARCHAR" />
+    <result column="COMPANY_NAME" property="companyName" jdbcType="VARCHAR" />
+    <result column="COMPANY_NAME_OLD" property="companyNameOld" jdbcType="VARCHAR" />
+    <result column="BUSINESS_TYPE" property="businessType" jdbcType="VARCHAR" />
+    <result column="INDUSTRY_CLASS" property="industryClass" jdbcType="VARCHAR" />
+    <result column="LEGAL_PERSON_NAME" property="legalPersonName" jdbcType="VARCHAR" />
+    <result column="REGISTRATION_AGENCY" property="registrationAgency" jdbcType="VARCHAR" />
+    <result column="CONTACTS" property="contacts" jdbcType="VARCHAR" />
+    <result column="SERIAL_NUMBER" property="serialNumber" jdbcType="VARCHAR" />
+    <result column="REGIST_CAPITAL" property="registCapital" jdbcType="DOUBLE" />
+    <result column="SETUP_TIME" property="setupTime" jdbcType="TIMESTAMP" />
+    <result column="APPROVAL_DATE" property="approvalDate" jdbcType="TIMESTAMP" />
+    <result column="MARKETING_TIME_LIMIT" property="marketingTimeLimit" jdbcType="VARCHAR" />
+    <result column="REGIST_ADDRESS" property="registAddress" jdbcType="VARCHAR" />
+    <result column="BUSINESS_SCOPE" property="businessScope" jdbcType="VARCHAR" />
+    <result column="MARKETING_STATUS" property="marketingStatus" jdbcType="VARCHAR" />
+    <result column="MARKETING_WAY" property="marketingWay" jdbcType="VARCHAR" />
+    <result column="ENGAGED_NUMBER" property="engagedNumber" jdbcType="VARCHAR" />
+    <result column="GENERAL_ASSETS" property="generalAssets" jdbcType="VARCHAR" />
+    <result column="GROSS_SALES" property="grossSales" jdbcType="VARCHAR" />
+    <result column="TOTAL_PROFIT" property="totalProfit" jdbcType="VARCHAR" />
+    <result column="BUSINESS_INCOME" property="businessIncome" jdbcType="VARCHAR" />
+    <result column="TAX_TOTAL" property="taxTotal" jdbcType="VARCHAR" />
+    <result column="INDEBTEDNESS_TOTAL" property="indebtednessTotal" jdbcType="VARCHAR" />
+    <result column="LNG" property="lng" jdbcType="VARCHAR" />
+    <result column="LAT" property="lat" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="GET_DATA_WAY" property="getDataWay" jdbcType="VARCHAR" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CREATE_USER_ID" property="createUserId" jdbcType="BIGINT" />
+    <result column="PYTHON_WEB_ID" property="pythonWebId" jdbcType="BIGINT" />
+    <result column="FILE_STATUS" property="fileStatus" jdbcType="VARCHAR" />
+    <result column="POI_UID" property="poiUid" jdbcType="VARCHAR" />
+    <result column="CLIENT_STATUS" property="clientStatus" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_POS_ID" property="updatePosId" jdbcType="BIGINT" />
+    <result column="BUSINESS_LICENSE_CODE" property="businessLicenseCode" jdbcType="VARCHAR" />
+    <result column="ORGANIZATION_CODE" property="organizationCode" jdbcType="VARCHAR" />
+    <result column="TAX_REGIST_CODE" property="taxRegistCode" jdbcType="VARCHAR" />
+    <result column="SOCIAL_INSURANCE_REG_CODE" property="socialInsuranceRegCode" jdbcType="VARCHAR" />
+    <result column="STATISTICAL_REGIST_CODE" property="statisticalRegistCode" jdbcType="VARCHAR" />
+    <result column="BUILDING" property="building" jdbcType="VARCHAR" />
+    <result column="FLOOR" property="floor" jdbcType="VARCHAR" />
+    <result column="ROOM_NUMBER" property="roomNumber" jdbcType="VARCHAR" />
+    <result column="ENTERPRISE_PHONE" property="enterprisePhone" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="SYN_PUSH_MESSAGE" property="synPushMessage" jdbcType="INTEGER" />
+    <result column="SYN_STATUS" property="synStatus" jdbcType="INTEGER" />
+    <result column="LOGID" property="logid" jdbcType="BIGINT" />
+    <result column="CHECK_RESULT" property="checkResult" jdbcType="VARCHAR" />
+    <result column="MERGE_SITE_ID" property="mergeSiteId" jdbcType="VARCHAR" />
+    <result column="IS_MAIN_SITE" property="isMainSite" jdbcType="VARCHAR" />
+    <result column="MATCH_SITE_IDS" property="matchSiteIds" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_MANAGER_ID" property="customerManagerId" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_MANAGER_NAME" property="customerManagerName" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_MANAGER_PHONE" property="customerManagerPhone" jdbcType="VARCHAR" />
+    <result column="THEME_ID" property="themeId" jdbcType="VARCHAR" />
+    <result column="COMPETITION_TYPE" property="competitionType" jdbcType="VARCHAR" />
+    <result column="DATA_START" property="dataStart" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.mybatis.generator.model.customerDataPy" extends="BaseResultMap" >
+    <result column="COMPANY_PROFILE" property="companyProfile" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PROVINCE, CITY, COUNTY, SOCIAL_CREDIT_CODE, COMPANY_REG_NUMBER, COMPANY_NUMBER, 
+    COMPANY_ENGLISH_NAME, COMPANY_NAME, COMPANY_NAME_OLD, BUSINESS_TYPE, INDUSTRY_CLASS, 
+    LEGAL_PERSON_NAME, REGISTRATION_AGENCY, CONTACTS, SERIAL_NUMBER, REGIST_CAPITAL, 
+    SETUP_TIME, APPROVAL_DATE, MARKETING_TIME_LIMIT, REGIST_ADDRESS, BUSINESS_SCOPE, 
+    MARKETING_STATUS, MARKETING_WAY, ENGAGED_NUMBER, GENERAL_ASSETS, GROSS_SALES, TOTAL_PROFIT, 
+    BUSINESS_INCOME, TAX_TOTAL, INDEBTEDNESS_TOTAL, LNG, LAT, URL, DATA_SOURCE, GET_DATA_WAY, 
+    UPDATE_TIME, STATUS, CREATE_USER_ID, PYTHON_WEB_ID, FILE_STATUS, POI_UID, CLIENT_STATUS, 
+    CREATE_DATE, UPDATE_POS_ID, BUSINESS_LICENSE_CODE, ORGANIZATION_CODE, TAX_REGIST_CODE, 
+    SOCIAL_INSURANCE_REG_CODE, STATISTICAL_REGIST_CODE, BUILDING, FLOOR, ROOM_NUMBER, 
+    ENTERPRISE_PHONE, EMAIL, SYN_PUSH_MESSAGE, SYN_STATUS, LOGID, CHECK_RESULT, MERGE_SITE_ID, 
+    IS_MAIN_SITE, MATCH_SITE_IDS, CUSTOMER_MANAGER_ID, CUSTOMER_MANAGER_NAME, CUSTOMER_MANAGER_PHONE, 
+    THEME_ID, COMPETITION_TYPE, DATA_START
+  </sql>
+  <sql id="Blob_Column_List" >
+    COMPANY_PROFILE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from customer_data_py
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from customer_data_py
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.mybatis.generator.model.customerDataPy" >
+    insert into customer_data_py (ID, PROVINCE, CITY, 
+      COUNTY, SOCIAL_CREDIT_CODE, COMPANY_REG_NUMBER, 
+      COMPANY_NUMBER, COMPANY_ENGLISH_NAME, COMPANY_NAME, 
+      COMPANY_NAME_OLD, BUSINESS_TYPE, INDUSTRY_CLASS, 
+      LEGAL_PERSON_NAME, REGISTRATION_AGENCY, CONTACTS, 
+      SERIAL_NUMBER, REGIST_CAPITAL, SETUP_TIME, 
+      APPROVAL_DATE, MARKETING_TIME_LIMIT, REGIST_ADDRESS, 
+      BUSINESS_SCOPE, MARKETING_STATUS, MARKETING_WAY, 
+      ENGAGED_NUMBER, GENERAL_ASSETS, GROSS_SALES, 
+      TOTAL_PROFIT, BUSINESS_INCOME, TAX_TOTAL, 
+      INDEBTEDNESS_TOTAL, LNG, LAT, 
+      URL, DATA_SOURCE, GET_DATA_WAY, 
+      UPDATE_TIME, STATUS, CREATE_USER_ID, 
+      PYTHON_WEB_ID, FILE_STATUS, POI_UID, 
+      CLIENT_STATUS, CREATE_DATE, UPDATE_POS_ID, 
+      BUSINESS_LICENSE_CODE, ORGANIZATION_CODE, 
+      TAX_REGIST_CODE, SOCIAL_INSURANCE_REG_CODE, 
+      STATISTICAL_REGIST_CODE, BUILDING, FLOOR, 
+      ROOM_NUMBER, ENTERPRISE_PHONE, EMAIL, 
+      SYN_PUSH_MESSAGE, SYN_STATUS, LOGID, 
+      CHECK_RESULT, MERGE_SITE_ID, IS_MAIN_SITE, 
+      MATCH_SITE_IDS, CUSTOMER_MANAGER_ID, CUSTOMER_MANAGER_NAME, 
+      CUSTOMER_MANAGER_PHONE, THEME_ID, COMPETITION_TYPE, 
+      DATA_START, COMPANY_PROFILE)
+    values (#{id,jdbcType=BIGINT}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{county,jdbcType=VARCHAR}, #{socialCreditCode,jdbcType=VARCHAR}, #{companyRegNumber,jdbcType=VARCHAR}, 
+      #{companyNumber,jdbcType=BIGINT}, #{companyEnglishName,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, 
+      #{companyNameOld,jdbcType=VARCHAR}, #{businessType,jdbcType=VARCHAR}, #{industryClass,jdbcType=VARCHAR}, 
+      #{legalPersonName,jdbcType=VARCHAR}, #{registrationAgency,jdbcType=VARCHAR}, #{contacts,jdbcType=VARCHAR}, 
+      #{serialNumber,jdbcType=VARCHAR}, #{registCapital,jdbcType=DOUBLE}, #{setupTime,jdbcType=TIMESTAMP}, 
+      #{approvalDate,jdbcType=TIMESTAMP}, #{marketingTimeLimit,jdbcType=VARCHAR}, #{registAddress,jdbcType=VARCHAR}, 
+      #{businessScope,jdbcType=VARCHAR}, #{marketingStatus,jdbcType=VARCHAR}, #{marketingWay,jdbcType=VARCHAR}, 
+      #{engagedNumber,jdbcType=VARCHAR}, #{generalAssets,jdbcType=VARCHAR}, #{grossSales,jdbcType=VARCHAR}, 
+      #{totalProfit,jdbcType=VARCHAR}, #{businessIncome,jdbcType=VARCHAR}, #{taxTotal,jdbcType=VARCHAR}, 
+      #{indebtednessTotal,jdbcType=VARCHAR}, #{lng,jdbcType=VARCHAR}, #{lat,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR}, #{dataSource,jdbcType=VARCHAR}, #{getDataWay,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, #{createUserId,jdbcType=BIGINT}, 
+      #{pythonWebId,jdbcType=BIGINT}, #{fileStatus,jdbcType=VARCHAR}, #{poiUid,jdbcType=VARCHAR}, 
+      #{clientStatus,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{updatePosId,jdbcType=BIGINT}, 
+      #{businessLicenseCode,jdbcType=VARCHAR}, #{organizationCode,jdbcType=VARCHAR}, 
+      #{taxRegistCode,jdbcType=VARCHAR}, #{socialInsuranceRegCode,jdbcType=VARCHAR}, 
+      #{statisticalRegistCode,jdbcType=VARCHAR}, #{building,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, 
+      #{roomNumber,jdbcType=VARCHAR}, #{enterprisePhone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{synPushMessage,jdbcType=INTEGER}, #{synStatus,jdbcType=INTEGER}, #{logid,jdbcType=BIGINT}, 
+      #{checkResult,jdbcType=VARCHAR}, #{mergeSiteId,jdbcType=VARCHAR}, #{isMainSite,jdbcType=VARCHAR}, 
+      #{matchSiteIds,jdbcType=VARCHAR}, #{customerManagerId,jdbcType=VARCHAR}, #{customerManagerName,jdbcType=VARCHAR}, 
+      #{customerManagerPhone,jdbcType=VARCHAR}, #{themeId,jdbcType=VARCHAR}, #{competitionType,jdbcType=VARCHAR}, 
+      #{dataStart,jdbcType=INTEGER}, #{companyProfile,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mybatis.generator.model.customerDataPy" >
+    insert into customer_data_py
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="province != null" >
+        PROVINCE,
+      </if>
+      <if test="city != null" >
+        CITY,
+      </if>
+      <if test="county != null" >
+        COUNTY,
+      </if>
+      <if test="socialCreditCode != null" >
+        SOCIAL_CREDIT_CODE,
+      </if>
+      <if test="companyRegNumber != null" >
+        COMPANY_REG_NUMBER,
+      </if>
+      <if test="companyNumber != null" >
+        COMPANY_NUMBER,
+      </if>
+      <if test="companyEnglishName != null" >
+        COMPANY_ENGLISH_NAME,
+      </if>
+      <if test="companyName != null" >
+        COMPANY_NAME,
+      </if>
+      <if test="companyNameOld != null" >
+        COMPANY_NAME_OLD,
+      </if>
+      <if test="businessType != null" >
+        BUSINESS_TYPE,
+      </if>
+      <if test="industryClass != null" >
+        INDUSTRY_CLASS,
+      </if>
+      <if test="legalPersonName != null" >
+        LEGAL_PERSON_NAME,
+      </if>
+      <if test="registrationAgency != null" >
+        REGISTRATION_AGENCY,
+      </if>
+      <if test="contacts != null" >
+        CONTACTS,
+      </if>
+      <if test="serialNumber != null" >
+        SERIAL_NUMBER,
+      </if>
+      <if test="registCapital != null" >
+        REGIST_CAPITAL,
+      </if>
+      <if test="setupTime != null" >
+        SETUP_TIME,
+      </if>
+      <if test="approvalDate != null" >
+        APPROVAL_DATE,
+      </if>
+      <if test="marketingTimeLimit != null" >
+        MARKETING_TIME_LIMIT,
+      </if>
+      <if test="registAddress != null" >
+        REGIST_ADDRESS,
+      </if>
+      <if test="businessScope != null" >
+        BUSINESS_SCOPE,
+      </if>
+      <if test="marketingStatus != null" >
+        MARKETING_STATUS,
+      </if>
+      <if test="marketingWay != null" >
+        MARKETING_WAY,
+      </if>
+      <if test="engagedNumber != null" >
+        ENGAGED_NUMBER,
+      </if>
+      <if test="generalAssets != null" >
+        GENERAL_ASSETS,
+      </if>
+      <if test="grossSales != null" >
+        GROSS_SALES,
+      </if>
+      <if test="totalProfit != null" >
+        TOTAL_PROFIT,
+      </if>
+      <if test="businessIncome != null" >
+        BUSINESS_INCOME,
+      </if>
+      <if test="taxTotal != null" >
+        TAX_TOTAL,
+      </if>
+      <if test="indebtednessTotal != null" >
+        INDEBTEDNESS_TOTAL,
+      </if>
+      <if test="lng != null" >
+        LNG,
+      </if>
+      <if test="lat != null" >
+        LAT,
+      </if>
+      <if test="url != null" >
+        URL,
+      </if>
+      <if test="dataSource != null" >
+        DATA_SOURCE,
+      </if>
+      <if test="getDataWay != null" >
+        GET_DATA_WAY,
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="createUserId != null" >
+        CREATE_USER_ID,
+      </if>
+      <if test="pythonWebId != null" >
+        PYTHON_WEB_ID,
+      </if>
+      <if test="fileStatus != null" >
+        FILE_STATUS,
+      </if>
+      <if test="poiUid != null" >
+        POI_UID,
+      </if>
+      <if test="clientStatus != null" >
+        CLIENT_STATUS,
+      </if>
+      <if test="createDate != null" >
+        CREATE_DATE,
+      </if>
+      <if test="updatePosId != null" >
+        UPDATE_POS_ID,
+      </if>
+      <if test="businessLicenseCode != null" >
+        BUSINESS_LICENSE_CODE,
+      </if>
+      <if test="organizationCode != null" >
+        ORGANIZATION_CODE,
+      </if>
+      <if test="taxRegistCode != null" >
+        TAX_REGIST_CODE,
+      </if>
+      <if test="socialInsuranceRegCode != null" >
+        SOCIAL_INSURANCE_REG_CODE,
+      </if>
+      <if test="statisticalRegistCode != null" >
+        STATISTICAL_REGIST_CODE,
+      </if>
+      <if test="building != null" >
+        BUILDING,
+      </if>
+      <if test="floor != null" >
+        FLOOR,
+      </if>
+      <if test="roomNumber != null" >
+        ROOM_NUMBER,
+      </if>
+      <if test="enterprisePhone != null" >
+        ENTERPRISE_PHONE,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="synPushMessage != null" >
+        SYN_PUSH_MESSAGE,
+      </if>
+      <if test="synStatus != null" >
+        SYN_STATUS,
+      </if>
+      <if test="logid != null" >
+        LOGID,
+      </if>
+      <if test="checkResult != null" >
+        CHECK_RESULT,
+      </if>
+      <if test="mergeSiteId != null" >
+        MERGE_SITE_ID,
+      </if>
+      <if test="isMainSite != null" >
+        IS_MAIN_SITE,
+      </if>
+      <if test="matchSiteIds != null" >
+        MATCH_SITE_IDS,
+      </if>
+      <if test="customerManagerId != null" >
+        CUSTOMER_MANAGER_ID,
+      </if>
+      <if test="customerManagerName != null" >
+        CUSTOMER_MANAGER_NAME,
+      </if>
+      <if test="customerManagerPhone != null" >
+        CUSTOMER_MANAGER_PHONE,
+      </if>
+      <if test="themeId != null" >
+        THEME_ID,
+      </if>
+      <if test="competitionType != null" >
+        COMPETITION_TYPE,
+      </if>
+      <if test="dataStart != null" >
+        DATA_START,
+      </if>
+      <if test="companyProfile != null" >
+        COMPANY_PROFILE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null" >
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="socialCreditCode != null" >
+        #{socialCreditCode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyRegNumber != null" >
+        #{companyRegNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="companyNumber != null" >
+        #{companyNumber,jdbcType=BIGINT},
+      </if>
+      <if test="companyEnglishName != null" >
+        #{companyEnglishName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null" >
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyNameOld != null" >
+        #{companyNameOld,jdbcType=VARCHAR},
+      </if>
+      <if test="businessType != null" >
+        #{businessType,jdbcType=VARCHAR},
+      </if>
+      <if test="industryClass != null" >
+        #{industryClass,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null" >
+        #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="registrationAgency != null" >
+        #{registrationAgency,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts != null" >
+        #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="serialNumber != null" >
+        #{serialNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="registCapital != null" >
+        #{registCapital,jdbcType=DOUBLE},
+      </if>
+      <if test="setupTime != null" >
+        #{setupTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="approvalDate != null" >
+        #{approvalDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="marketingTimeLimit != null" >
+        #{marketingTimeLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="registAddress != null" >
+        #{registAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="businessScope != null" >
+        #{businessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="marketingStatus != null" >
+        #{marketingStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="marketingWay != null" >
+        #{marketingWay,jdbcType=VARCHAR},
+      </if>
+      <if test="engagedNumber != null" >
+        #{engagedNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="generalAssets != null" >
+        #{generalAssets,jdbcType=VARCHAR},
+      </if>
+      <if test="grossSales != null" >
+        #{grossSales,jdbcType=VARCHAR},
+      </if>
+      <if test="totalProfit != null" >
+        #{totalProfit,jdbcType=VARCHAR},
+      </if>
+      <if test="businessIncome != null" >
+        #{businessIncome,jdbcType=VARCHAR},
+      </if>
+      <if test="taxTotal != null" >
+        #{taxTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="indebtednessTotal != null" >
+        #{indebtednessTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="lng != null" >
+        #{lng,jdbcType=VARCHAR},
+      </if>
+      <if test="lat != null" >
+        #{lat,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="dataSource != null" >
+        #{dataSource,jdbcType=VARCHAR},
+      </if>
+      <if test="getDataWay != null" >
+        #{getDataWay,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createUserId != null" >
+        #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="pythonWebId != null" >
+        #{pythonWebId,jdbcType=BIGINT},
+      </if>
+      <if test="fileStatus != null" >
+        #{fileStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="poiUid != null" >
+        #{poiUid,jdbcType=VARCHAR},
+      </if>
+      <if test="clientStatus != null" >
+        #{clientStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatePosId != null" >
+        #{updatePosId,jdbcType=BIGINT},
+      </if>
+      <if test="businessLicenseCode != null" >
+        #{businessLicenseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null" >
+        #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="taxRegistCode != null" >
+        #{taxRegistCode,jdbcType=VARCHAR},
+      </if>
+      <if test="socialInsuranceRegCode != null" >
+        #{socialInsuranceRegCode,jdbcType=VARCHAR},
+      </if>
+      <if test="statisticalRegistCode != null" >
+        #{statisticalRegistCode,jdbcType=VARCHAR},
+      </if>
+      <if test="building != null" >
+        #{building,jdbcType=VARCHAR},
+      </if>
+      <if test="floor != null" >
+        #{floor,jdbcType=VARCHAR},
+      </if>
+      <if test="roomNumber != null" >
+        #{roomNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisePhone != null" >
+        #{enterprisePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="synPushMessage != null" >
+        #{synPushMessage,jdbcType=INTEGER},
+      </if>
+      <if test="synStatus != null" >
+        #{synStatus,jdbcType=INTEGER},
+      </if>
+      <if test="logid != null" >
+        #{logid,jdbcType=BIGINT},
+      </if>
+      <if test="checkResult != null" >
+        #{checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="mergeSiteId != null" >
+        #{mergeSiteId,jdbcType=VARCHAR},
+      </if>
+      <if test="isMainSite != null" >
+        #{isMainSite,jdbcType=VARCHAR},
+      </if>
+      <if test="matchSiteIds != null" >
+        #{matchSiteIds,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManagerId != null" >
+        #{customerManagerId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManagerName != null" >
+        #{customerManagerName,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManagerPhone != null" >
+        #{customerManagerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="themeId != null" >
+        #{themeId,jdbcType=VARCHAR},
+      </if>
+      <if test="competitionType != null" >
+        #{competitionType,jdbcType=VARCHAR},
+      </if>
+      <if test="dataStart != null" >
+        #{dataStart,jdbcType=INTEGER},
+      </if>
+      <if test="companyProfile != null" >
+        #{companyProfile,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mybatis.generator.model.customerDataPy" >
+    update customer_data_py
+    <set >
+      <if test="province != null" >
+        PROVINCE = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        CITY = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null" >
+        COUNTY = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="socialCreditCode != null" >
+        SOCIAL_CREDIT_CODE = #{socialCreditCode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyRegNumber != null" >
+        COMPANY_REG_NUMBER = #{companyRegNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="companyNumber != null" >
+        COMPANY_NUMBER = #{companyNumber,jdbcType=BIGINT},
+      </if>
+      <if test="companyEnglishName != null" >
+        COMPANY_ENGLISH_NAME = #{companyEnglishName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null" >
+        COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyNameOld != null" >
+        COMPANY_NAME_OLD = #{companyNameOld,jdbcType=VARCHAR},
+      </if>
+      <if test="businessType != null" >
+        BUSINESS_TYPE = #{businessType,jdbcType=VARCHAR},
+      </if>
+      <if test="industryClass != null" >
+        INDUSTRY_CLASS = #{industryClass,jdbcType=VARCHAR},
+      </if>
+      <if test="legalPersonName != null" >
+        LEGAL_PERSON_NAME = #{legalPersonName,jdbcType=VARCHAR},
+      </if>
+      <if test="registrationAgency != null" >
+        REGISTRATION_AGENCY = #{registrationAgency,jdbcType=VARCHAR},
+      </if>
+      <if test="contacts != null" >
+        CONTACTS = #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="serialNumber != null" >
+        SERIAL_NUMBER = #{serialNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="registCapital != null" >
+        REGIST_CAPITAL = #{registCapital,jdbcType=DOUBLE},
+      </if>
+      <if test="setupTime != null" >
+        SETUP_TIME = #{setupTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="approvalDate != null" >
+        APPROVAL_DATE = #{approvalDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="marketingTimeLimit != null" >
+        MARKETING_TIME_LIMIT = #{marketingTimeLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="registAddress != null" >
+        REGIST_ADDRESS = #{registAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="businessScope != null" >
+        BUSINESS_SCOPE = #{businessScope,jdbcType=VARCHAR},
+      </if>
+      <if test="marketingStatus != null" >
+        MARKETING_STATUS = #{marketingStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="marketingWay != null" >
+        MARKETING_WAY = #{marketingWay,jdbcType=VARCHAR},
+      </if>
+      <if test="engagedNumber != null" >
+        ENGAGED_NUMBER = #{engagedNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="generalAssets != null" >
+        GENERAL_ASSETS = #{generalAssets,jdbcType=VARCHAR},
+      </if>
+      <if test="grossSales != null" >
+        GROSS_SALES = #{grossSales,jdbcType=VARCHAR},
+      </if>
+      <if test="totalProfit != null" >
+        TOTAL_PROFIT = #{totalProfit,jdbcType=VARCHAR},
+      </if>
+      <if test="businessIncome != null" >
+        BUSINESS_INCOME = #{businessIncome,jdbcType=VARCHAR},
+      </if>
+      <if test="taxTotal != null" >
+        TAX_TOTAL = #{taxTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="indebtednessTotal != null" >
+        INDEBTEDNESS_TOTAL = #{indebtednessTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="lng != null" >
+        LNG = #{lng,jdbcType=VARCHAR},
+      </if>
+      <if test="lat != null" >
+        LAT = #{lat,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        URL = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="dataSource != null" >
+        DATA_SOURCE = #{dataSource,jdbcType=VARCHAR},
+      </if>
+      <if test="getDataWay != null" >
+        GET_DATA_WAY = #{getDataWay,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createUserId != null" >
+        CREATE_USER_ID = #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="pythonWebId != null" >
+        PYTHON_WEB_ID = #{pythonWebId,jdbcType=BIGINT},
+      </if>
+      <if test="fileStatus != null" >
+        FILE_STATUS = #{fileStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="poiUid != null" >
+        POI_UID = #{poiUid,jdbcType=VARCHAR},
+      </if>
+      <if test="clientStatus != null" >
+        CLIENT_STATUS = #{clientStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        CREATE_DATE = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatePosId != null" >
+        UPDATE_POS_ID = #{updatePosId,jdbcType=BIGINT},
+      </if>
+      <if test="businessLicenseCode != null" >
+        BUSINESS_LICENSE_CODE = #{businessLicenseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationCode != null" >
+        ORGANIZATION_CODE = #{organizationCode,jdbcType=VARCHAR},
+      </if>
+      <if test="taxRegistCode != null" >
+        TAX_REGIST_CODE = #{taxRegistCode,jdbcType=VARCHAR},
+      </if>
+      <if test="socialInsuranceRegCode != null" >
+        SOCIAL_INSURANCE_REG_CODE = #{socialInsuranceRegCode,jdbcType=VARCHAR},
+      </if>
+      <if test="statisticalRegistCode != null" >
+        STATISTICAL_REGIST_CODE = #{statisticalRegistCode,jdbcType=VARCHAR},
+      </if>
+      <if test="building != null" >
+        BUILDING = #{building,jdbcType=VARCHAR},
+      </if>
+      <if test="floor != null" >
+        FLOOR = #{floor,jdbcType=VARCHAR},
+      </if>
+      <if test="roomNumber != null" >
+        ROOM_NUMBER = #{roomNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisePhone != null" >
+        ENTERPRISE_PHONE = #{enterprisePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="synPushMessage != null" >
+        SYN_PUSH_MESSAGE = #{synPushMessage,jdbcType=INTEGER},
+      </if>
+      <if test="synStatus != null" >
+        SYN_STATUS = #{synStatus,jdbcType=INTEGER},
+      </if>
+      <if test="logid != null" >
+        LOGID = #{logid,jdbcType=BIGINT},
+      </if>
+      <if test="checkResult != null" >
+        CHECK_RESULT = #{checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="mergeSiteId != null" >
+        MERGE_SITE_ID = #{mergeSiteId,jdbcType=VARCHAR},
+      </if>
+      <if test="isMainSite != null" >
+        IS_MAIN_SITE = #{isMainSite,jdbcType=VARCHAR},
+      </if>
+      <if test="matchSiteIds != null" >
+        MATCH_SITE_IDS = #{matchSiteIds,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManagerId != null" >
+        CUSTOMER_MANAGER_ID = #{customerManagerId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManagerName != null" >
+        CUSTOMER_MANAGER_NAME = #{customerManagerName,jdbcType=VARCHAR},
+      </if>
+      <if test="customerManagerPhone != null" >
+        CUSTOMER_MANAGER_PHONE = #{customerManagerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="themeId != null" >
+        THEME_ID = #{themeId,jdbcType=VARCHAR},
+      </if>
+      <if test="competitionType != null" >
+        COMPETITION_TYPE = #{competitionType,jdbcType=VARCHAR},
+      </if>
+      <if test="dataStart != null" >
+        DATA_START = #{dataStart,jdbcType=INTEGER},
+      </if>
+      <if test="companyProfile != null" >
+        COMPANY_PROFILE = #{companyProfile,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mybatis.generator.model.customerDataPy" >
+    update customer_data_py
+    set PROVINCE = #{province,jdbcType=VARCHAR},
+      CITY = #{city,jdbcType=VARCHAR},
+      COUNTY = #{county,jdbcType=VARCHAR},
+      SOCIAL_CREDIT_CODE = #{socialCreditCode,jdbcType=VARCHAR},
+      COMPANY_REG_NUMBER = #{companyRegNumber,jdbcType=VARCHAR},
+      COMPANY_NUMBER = #{companyNumber,jdbcType=BIGINT},
+      COMPANY_ENGLISH_NAME = #{companyEnglishName,jdbcType=VARCHAR},
+      COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+      COMPANY_NAME_OLD = #{companyNameOld,jdbcType=VARCHAR},
+      BUSINESS_TYPE = #{businessType,jdbcType=VARCHAR},
+      INDUSTRY_CLASS = #{industryClass,jdbcType=VARCHAR},
+      LEGAL_PERSON_NAME = #{legalPersonName,jdbcType=VARCHAR},
+      REGISTRATION_AGENCY = #{registrationAgency,jdbcType=VARCHAR},
+      CONTACTS = #{contacts,jdbcType=VARCHAR},
+      SERIAL_NUMBER = #{serialNumber,jdbcType=VARCHAR},
+      REGIST_CAPITAL = #{registCapital,jdbcType=DOUBLE},
+      SETUP_TIME = #{setupTime,jdbcType=TIMESTAMP},
+      APPROVAL_DATE = #{approvalDate,jdbcType=TIMESTAMP},
+      MARKETING_TIME_LIMIT = #{marketingTimeLimit,jdbcType=VARCHAR},
+      REGIST_ADDRESS = #{registAddress,jdbcType=VARCHAR},
+      BUSINESS_SCOPE = #{businessScope,jdbcType=VARCHAR},
+      MARKETING_STATUS = #{marketingStatus,jdbcType=VARCHAR},
+      MARKETING_WAY = #{marketingWay,jdbcType=VARCHAR},
+      ENGAGED_NUMBER = #{engagedNumber,jdbcType=VARCHAR},
+      GENERAL_ASSETS = #{generalAssets,jdbcType=VARCHAR},
+      GROSS_SALES = #{grossSales,jdbcType=VARCHAR},
+      TOTAL_PROFIT = #{totalProfit,jdbcType=VARCHAR},
+      BUSINESS_INCOME = #{businessIncome,jdbcType=VARCHAR},
+      TAX_TOTAL = #{taxTotal,jdbcType=VARCHAR},
+      INDEBTEDNESS_TOTAL = #{indebtednessTotal,jdbcType=VARCHAR},
+      LNG = #{lng,jdbcType=VARCHAR},
+      LAT = #{lat,jdbcType=VARCHAR},
+      URL = #{url,jdbcType=VARCHAR},
+      DATA_SOURCE = #{dataSource,jdbcType=VARCHAR},
+      GET_DATA_WAY = #{getDataWay,jdbcType=VARCHAR},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      STATUS = #{status,jdbcType=VARCHAR},
+      CREATE_USER_ID = #{createUserId,jdbcType=BIGINT},
+      PYTHON_WEB_ID = #{pythonWebId,jdbcType=BIGINT},
+      FILE_STATUS = #{fileStatus,jdbcType=VARCHAR},
+      POI_UID = #{poiUid,jdbcType=VARCHAR},
+      CLIENT_STATUS = #{clientStatus,jdbcType=VARCHAR},
+      CREATE_DATE = #{createDate,jdbcType=TIMESTAMP},
+      UPDATE_POS_ID = #{updatePosId,jdbcType=BIGINT},
+      BUSINESS_LICENSE_CODE = #{businessLicenseCode,jdbcType=VARCHAR},
+      ORGANIZATION_CODE = #{organizationCode,jdbcType=VARCHAR},
+      TAX_REGIST_CODE = #{taxRegistCode,jdbcType=VARCHAR},
+      SOCIAL_INSURANCE_REG_CODE = #{socialInsuranceRegCode,jdbcType=VARCHAR},
+      STATISTICAL_REGIST_CODE = #{statisticalRegistCode,jdbcType=VARCHAR},
+      BUILDING = #{building,jdbcType=VARCHAR},
+      FLOOR = #{floor,jdbcType=VARCHAR},
+      ROOM_NUMBER = #{roomNumber,jdbcType=VARCHAR},
+      ENTERPRISE_PHONE = #{enterprisePhone,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      SYN_PUSH_MESSAGE = #{synPushMessage,jdbcType=INTEGER},
+      SYN_STATUS = #{synStatus,jdbcType=INTEGER},
+      LOGID = #{logid,jdbcType=BIGINT},
+      CHECK_RESULT = #{checkResult,jdbcType=VARCHAR},
+      MERGE_SITE_ID = #{mergeSiteId,jdbcType=VARCHAR},
+      IS_MAIN_SITE = #{isMainSite,jdbcType=VARCHAR},
+      MATCH_SITE_IDS = #{matchSiteIds,jdbcType=VARCHAR},
+      CUSTOMER_MANAGER_ID = #{customerManagerId,jdbcType=VARCHAR},
+      CUSTOMER_MANAGER_NAME = #{customerManagerName,jdbcType=VARCHAR},
+      CUSTOMER_MANAGER_PHONE = #{customerManagerPhone,jdbcType=VARCHAR},
+      THEME_ID = #{themeId,jdbcType=VARCHAR},
+      COMPETITION_TYPE = #{competitionType,jdbcType=VARCHAR},
+      DATA_START = #{dataStart,jdbcType=INTEGER},
+      COMPANY_PROFILE = #{companyProfile,jdbcType=LONGVARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mybatis.generator.model.customerDataPy" >
+    update customer_data_py
+    set PROVINCE = #{province,jdbcType=VARCHAR},
+      CITY = #{city,jdbcType=VARCHAR},
+      COUNTY = #{county,jdbcType=VARCHAR},
+      SOCIAL_CREDIT_CODE = #{socialCreditCode,jdbcType=VARCHAR},
+      COMPANY_REG_NUMBER = #{companyRegNumber,jdbcType=VARCHAR},
+      COMPANY_NUMBER = #{companyNumber,jdbcType=BIGINT},
+      COMPANY_ENGLISH_NAME = #{companyEnglishName,jdbcType=VARCHAR},
+      COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+      COMPANY_NAME_OLD = #{companyNameOld,jdbcType=VARCHAR},
+      BUSINESS_TYPE = #{businessType,jdbcType=VARCHAR},
+      INDUSTRY_CLASS = #{industryClass,jdbcType=VARCHAR},
+      LEGAL_PERSON_NAME = #{legalPersonName,jdbcType=VARCHAR},
+      REGISTRATION_AGENCY = #{registrationAgency,jdbcType=VARCHAR},
+      CONTACTS = #{contacts,jdbcType=VARCHAR},
+      SERIAL_NUMBER = #{serialNumber,jdbcType=VARCHAR},
+      REGIST_CAPITAL = #{registCapital,jdbcType=DOUBLE},
+      SETUP_TIME = #{setupTime,jdbcType=TIMESTAMP},
+      APPROVAL_DATE = #{approvalDate,jdbcType=TIMESTAMP},
+      MARKETING_TIME_LIMIT = #{marketingTimeLimit,jdbcType=VARCHAR},
+      REGIST_ADDRESS = #{registAddress,jdbcType=VARCHAR},
+      BUSINESS_SCOPE = #{businessScope,jdbcType=VARCHAR},
+      MARKETING_STATUS = #{marketingStatus,jdbcType=VARCHAR},
+      MARKETING_WAY = #{marketingWay,jdbcType=VARCHAR},
+      ENGAGED_NUMBER = #{engagedNumber,jdbcType=VARCHAR},
+      GENERAL_ASSETS = #{generalAssets,jdbcType=VARCHAR},
+      GROSS_SALES = #{grossSales,jdbcType=VARCHAR},
+      TOTAL_PROFIT = #{totalProfit,jdbcType=VARCHAR},
+      BUSINESS_INCOME = #{businessIncome,jdbcType=VARCHAR},
+      TAX_TOTAL = #{taxTotal,jdbcType=VARCHAR},
+      INDEBTEDNESS_TOTAL = #{indebtednessTotal,jdbcType=VARCHAR},
+      LNG = #{lng,jdbcType=VARCHAR},
+      LAT = #{lat,jdbcType=VARCHAR},
+      URL = #{url,jdbcType=VARCHAR},
+      DATA_SOURCE = #{dataSource,jdbcType=VARCHAR},
+      GET_DATA_WAY = #{getDataWay,jdbcType=VARCHAR},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      STATUS = #{status,jdbcType=VARCHAR},
+      CREATE_USER_ID = #{createUserId,jdbcType=BIGINT},
+      PYTHON_WEB_ID = #{pythonWebId,jdbcType=BIGINT},
+      FILE_STATUS = #{fileStatus,jdbcType=VARCHAR},
+      POI_UID = #{poiUid,jdbcType=VARCHAR},
+      CLIENT_STATUS = #{clientStatus,jdbcType=VARCHAR},
+      CREATE_DATE = #{createDate,jdbcType=TIMESTAMP},
+      UPDATE_POS_ID = #{updatePosId,jdbcType=BIGINT},
+      BUSINESS_LICENSE_CODE = #{businessLicenseCode,jdbcType=VARCHAR},
+      ORGANIZATION_CODE = #{organizationCode,jdbcType=VARCHAR},
+      TAX_REGIST_CODE = #{taxRegistCode,jdbcType=VARCHAR},
+      SOCIAL_INSURANCE_REG_CODE = #{socialInsuranceRegCode,jdbcType=VARCHAR},
+      STATISTICAL_REGIST_CODE = #{statisticalRegistCode,jdbcType=VARCHAR},
+      BUILDING = #{building,jdbcType=VARCHAR},
+      FLOOR = #{floor,jdbcType=VARCHAR},
+      ROOM_NUMBER = #{roomNumber,jdbcType=VARCHAR},
+      ENTERPRISE_PHONE = #{enterprisePhone,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      SYN_PUSH_MESSAGE = #{synPushMessage,jdbcType=INTEGER},
+      SYN_STATUS = #{synStatus,jdbcType=INTEGER},
+      LOGID = #{logid,jdbcType=BIGINT},
+      CHECK_RESULT = #{checkResult,jdbcType=VARCHAR},
+      MERGE_SITE_ID = #{mergeSiteId,jdbcType=VARCHAR},
+      IS_MAIN_SITE = #{isMainSite,jdbcType=VARCHAR},
+      MATCH_SITE_IDS = #{matchSiteIds,jdbcType=VARCHAR},
+      CUSTOMER_MANAGER_ID = #{customerManagerId,jdbcType=VARCHAR},
+      CUSTOMER_MANAGER_NAME = #{customerManagerName,jdbcType=VARCHAR},
+      CUSTOMER_MANAGER_PHONE = #{customerManagerPhone,jdbcType=VARCHAR},
+      THEME_ID = #{themeId,jdbcType=VARCHAR},
+      COMPETITION_TYPE = #{competitionType,jdbcType=VARCHAR},
+      DATA_START = #{dataStart,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

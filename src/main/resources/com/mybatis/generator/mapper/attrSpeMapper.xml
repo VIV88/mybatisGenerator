@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.generator.dao.attrSpeMapper">
+  <resultMap id="BaseResultMap" type="com.mybatis.generator.model.attrSpe">
+    <result column="ATTR_SPEC_CODE" jdbcType="VARCHAR" property="attrSpecCode" />
+    <result column="ATTR_SPEC_NAME" jdbcType="VARCHAR" property="attrSpecName" />
+    <result column="ATTR_SPEC_DESC" jdbcType="VARCHAR" property="attrSpecDesc" />
+    <result column="ATTR_SPEC_TYPE" jdbcType="VARCHAR" property="attrSpecType" />
+  </resultMap>
+  <insert id="insert" parameterType="com.mybatis.generator.model.attrSpe">
+    insert into attr_spec (ATTR_SPEC_CODE, ATTR_SPEC_NAME, ATTR_SPEC_DESC, 
+      ATTR_SPEC_TYPE)
+    values (#{attrSpecCode,jdbcType=VARCHAR}, #{attrSpecName,jdbcType=VARCHAR}, #{attrSpecDesc,jdbcType=VARCHAR}, 
+      #{attrSpecType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mybatis.generator.model.attrSpe">
+    insert into attr_spec
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attrSpecCode != null">
+        ATTR_SPEC_CODE,
+      </if>
+      <if test="attrSpecName != null">
+        ATTR_SPEC_NAME,
+      </if>
+      <if test="attrSpecDesc != null">
+        ATTR_SPEC_DESC,
+      </if>
+      <if test="attrSpecType != null">
+        ATTR_SPEC_TYPE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attrSpecCode != null">
+        #{attrSpecCode,jdbcType=VARCHAR},
+      </if>
+      <if test="attrSpecName != null">
+        #{attrSpecName,jdbcType=VARCHAR},
+      </if>
+      <if test="attrSpecDesc != null">
+        #{attrSpecDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="attrSpecType != null">
+        #{attrSpecType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="com.mybatis.generator.model.attrSpe">
+    <result column="ATTR_SPEC_CODE" jdbcType="VARCHAR" property="attrSpecCode" />
+    <result column="ATTR_SPEC_NAME" jdbcType="VARCHAR" property="attrSpecName" />
+    <result column="ATTR_SPEC_DESC" jdbcType="VARCHAR" property="attrSpecDesc" />
+    <result column="ATTR_SPEC_TYPE" jdbcType="VARCHAR" property="attrSpecType" />
+  </resultMap>
+  <insert id="insert" parameterType="com.mybatis.generator.model.attrSpe">
+    insert into attr_spec (ATTR_SPEC_CODE, ATTR_SPEC_NAME, ATTR_SPEC_DESC, 
+      ATTR_SPEC_TYPE)
+    values (#{attrSpecCode,jdbcType=VARCHAR}, #{attrSpecName,jdbcType=VARCHAR}, #{attrSpecDesc,jdbcType=VARCHAR}, 
+      #{attrSpecType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mybatis.generator.model.attrSpe">
+    insert into attr_spec
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attrSpecCode != null">
+        ATTR_SPEC_CODE,
+      </if>
+      <if test="attrSpecName != null">
+        ATTR_SPEC_NAME,
+      </if>
+      <if test="attrSpecDesc != null">
+        ATTR_SPEC_DESC,
+      </if>
+      <if test="attrSpecType != null">
+        ATTR_SPEC_TYPE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attrSpecCode != null">
+        #{attrSpecCode,jdbcType=VARCHAR},
+      </if>
+      <if test="attrSpecName != null">
+        #{attrSpecName,jdbcType=VARCHAR},
+      </if>
+      <if test="attrSpecDesc != null">
+        #{attrSpecDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="attrSpecType != null">
+        #{attrSpecType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
